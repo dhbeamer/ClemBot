@@ -74,3 +74,11 @@ CREATE TABLE IF NOT EXISTS DesignatedChannels_Channels (
         REFERENCES DesignatedChannels (id)
 );
 
+CREATE TABLE IF NOT EXISTS Tags (
+    id      INTEGER     PRIMARY KEY,
+    name    TEXT        NOT NULL,
+    content TEXT        NOT NULL,
+    fk_guildId INTEGER  NOT NULL,
+    fk_userId INTEGER   NOT NULL,
+    create_date TEXT    NOT NULL
+);
